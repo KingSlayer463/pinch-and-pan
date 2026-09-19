@@ -40,6 +40,14 @@ Users can:
 - Calorie estimates and health tags
 - Missing ingredient detection
 - YouTube cooking tutorials
+
+## Tech Stack
+
+- TypeScript
+- React
+- Replit
+- Local recipe dataset
+- YouTube tutorial links
   
 ## Why We Built It
 
