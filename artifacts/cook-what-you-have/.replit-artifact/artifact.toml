@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Cook What You Have"
+description = "An English-language cooking recommendation app that helps home cooks discover meals from the ingredients they already have, filtered by time, skill, and taste preferences."
+version = "1.0.0"
+id = "artifacts/cook-what-you-have"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18980
+
+[services.development]
+run = "pnpm --filter @workspace/cook-what-you-have run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/cook-what-you-have", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/cook-what-you-have/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18980"
+BASE_PATH = "/"

@@ -1,0 +1,164 @@
+Build a polished English-language cooking recommendation web app for a hackathon demo.
+
+The core idea is: users select ingredients they currently have, then the app recommends meals they can make. The recommendation should also consider the user's cooking skill level, available cooking time, and food preferences.
+
+This is only a demo/MVP, so keep the architecture simple and reliable.
+
+Use a LOCAL recipe dataset (JSON or TypeScript file). Do NOT build a backend database and do NOT require a recipe API for now.
+
+Each recipe should contain fields like:
+
+* name
+* ingredients
+* difficulty: Easy / Intermediate / Advanced
+* cookingTime
+* cuisine
+* tags, such as spicy, savory, light, rich, vegetarian, high-protein, comfort-food
+* shortDescription
+* youtubeUrl or youtubeSearchQuery
+
+Example recipe:
+
+{
+name: "Chicken Fried Rice",
+ingredients: ["chicken", "rice", "egg", "onion"],
+difficulty: "Easy",
+cookingTime: 20,
+cuisine: "Asian",
+tags: ["savory", "quick", "high-protein"],
+shortDescription: "A savory and filling rice dish with chicken, egg, and vegetables. Good for users who like simple comfort food.",
+youtubeSearchQuery: "Chicken Fried Rice recipe"
+}
+
+Main user flow:
+
+1. User selects ingredients they have.
+2. User optionally selects:
+
+   * difficulty level
+   * cooking time
+   * food preferences / flavor preferences
+3. App filters the local recipe dataset.
+4. Show matching meals as recipe cards.
+5. Each recipe card should show:
+
+   * meal name
+   * difficulty
+   * estimated cooking time
+   * cuisine
+   * flavor/preferences tags
+   * short description
+   * how many ingredients the user already has
+   * missing ingredients
+   * button to watch/search for a tutorial on YouTube
+
+Important matching behavior:
+
+Do not only show recipes where the user has 100% of the ingredients.
+
+Also show close matches such as:
+
+"You have 4 of 5 ingredients"
+"Missing: Parmesan"
+
+Rank better matches higher.
+
+Suggested filters:
+
+Ingredients:
+
+* chicken
+* beef
+* egg
+* rice
+* pasta
+* tomato
+* onion
+* potato
+* cheese
+* bread
+* garlic
+* milk
+
+Difficulty:
+
+* Easy
+* Intermediate
+* Advanced
+
+Time:
+
+* Under 20 minutes
+* 20–40 minutes
+* 40+ minutes
+
+Preferences:
+
+* Spicy
+* Savory
+* Light
+* Rich
+* High Protein
+* Vegetarian
+* Comfort Food
+* Healthy
+
+For the YouTube feature, do NOT use the YouTube API unless necessary.
+
+If there is no predefined YouTube video for a recipe, generate a link like:
+
+https://www.youtube.com/results?search_query=Chicken+Fried+Rice+recipe
+
+The interface should feel modern, clean, visual, and demo-ready.
+
+Suggested page layout:
+
+Top section:
+"What can I cook with what I have?"
+
+Ingredient selection area with clickable ingredient chips/cards.
+
+Then:
+"How much time do you have?"
+"What's your cooking level?"
+"What are you in the mood for?"
+
+Then a large:
+"Find My Meals" button.
+
+Results section should display attractive recipe cards.
+
+Example card:
+
+Chicken Fried Rice
+Easy • 20 min • Asian
+
+Savory • High Protein • Quick
+
+"A flavorful and filling fried rice made with chicken, egg, vegetables, and rice."
+
+You have 4/5 ingredients
+Missing: Green Onion
+
+[Watch Tutorial]
+
+Please seed the app with approximately 15–20 realistic recipes so the demo works immediately.
+
+Prioritize:
+
+1. Working filtering
+2. Attractive UI
+3. Reliable local data
+4. Clear recipe descriptions
+5. YouTube tutorial linking
+
+Do not spend time building:
+
+* user accounts
+* authentication
+* backend databases
+* payment
+* complicated AI recommendation models
+* external recipe API integration
+
+The final product should feel like a personalized "What should I cook right now?" assistant rather than just a recipe list.
