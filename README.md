@@ -28,6 +28,19 @@ Users can:
 5. Compare calories, health tags, and missing ingredients.
 6. Open a YouTube tutorial and start cooking.
 
+## Key Features
+
+- Ingredient-first meal recommendations
+- Fuzzy, strict, and survival matching modes
+- Health goal filters:
+  - Lower calorie
+  - Fat-loss friendly
+  - Muscle-gain friendly
+  - Balanced meal
+- Calorie estimates and health tags
+- Missing ingredient detection
+- YouTube cooking tutorials
+  
 ## Why We Built It
 
 Many people already have food at home but still order takeout because deciding what to cook takes time and effort.
