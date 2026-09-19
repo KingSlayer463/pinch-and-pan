@@ -6,6 +6,10 @@
 
 👉 https://pinch-and-pan-recipe-picker.replit.app
 
+## Preview
+
+![Pinch & Pan Preview](./preview.png)
+
 ## What It Does
 
 Pinch & Pan helps users decide what to cook based on the ingredients they already have.
